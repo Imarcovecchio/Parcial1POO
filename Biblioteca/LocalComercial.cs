@@ -10,9 +10,17 @@ public class LocalComercial:Inmueble{
         get{
             double cotizacion = base.Cotizacion;
             if(sinImpuestos){
-                cotizacion = (cotizacion * 10 /100) - cotizacion;
+                cotizacion *= 0.9;
             }
             return cotizacion;
         }
+    }
+    public override string Caracteristicas()
+    {
+        string caracter = base.Caracteristicas();
+        if(sinImpuestos){
+            caracter += ", Sin impuestos";
+        }
+        return caracter;
     }
 }

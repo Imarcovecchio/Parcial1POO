@@ -19,6 +19,9 @@ public class Inmueble{
             return cotizacion;
             }
     }
+    public virtual string Caracteristicas(){
+        return "Metros:" + metros + ", Barrio:" + barrio;
+    }
      
     
     

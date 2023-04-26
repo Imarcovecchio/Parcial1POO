@@ -20,4 +20,15 @@ public class Casa:Inmueble{
             return cotizacion;
         }
     }
+    public override string Caracteristicas()
+    {
+        string caracter = base.Caracteristicas();
+        if(tienePileta){
+            caracter+= ", Tiene pileta";
+        }
+        if(tieneCochera){
+            caracter+=", Tiene cochera";
+        }
+        return caracter;
+    }
 }
